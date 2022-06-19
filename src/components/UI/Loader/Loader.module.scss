@@ -1,0 +1,115 @@
+@import "../../../style/variables";
+
+.loader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	padding: 80px 40px;
+
+	&__body {
+		position: relative;
+		z-index: 1;
+
+		width: 100px;
+	}
+
+	&__item {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		transform: translate(-50%, -50%);
+
+		display: inline-block;
+		width: 8px;
+		height: 0;
+		border-radius: 10px;
+		background: $grey-light;
+		border: 5px solid $grey-light;
+
+		&:nth-child(1) {
+			left: 0;
+			animation: loading1 1s ease 0s infinite forwards;
+		}
+
+		&:nth-child(2) {
+			left: 25%;
+			animation: loading2 1s ease 0.1s infinite forwards;
+		}
+
+		&:nth-child(3) {
+			left: 50%;
+			animation: loading1 1s ease 0.2s infinite forwards;
+		}
+
+		&:nth-child(4) {
+			left: 75%;
+			animation: loading2 1s ease 0.3s infinite forwards;
+		}
+
+		&:nth-child(5) {
+			left: 100%;
+			animation: loading1 1s ease 0.4s infinite forwards;
+		}
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__subtitle {
+		text-align: center;
+	}
+}
+
+@keyframes loading1 {
+	0% {
+		height: 0;
+		margin-top: 0;
+	}
+
+	25% {
+		height: 30px;
+	}
+
+	50% {
+		margin-top: -10px;
+	}
+
+	75% {
+		height: 0;
+	}
+
+	100% {
+		height: 0;
+		margin-top: 0;
+	}
+}
+
+@keyframes loading2 {
+	0% {
+		height: 0;
+		margin-top: 0;
+	}
+
+	25% {
+		height: 60px;
+	}
+
+	50% {
+		margin-top: -10px;
+	}
+
+	75% {
+		height: 0;
+	}
+
+	100% {
+		height: 0;
+		margin-top: 0;
+	}
+}

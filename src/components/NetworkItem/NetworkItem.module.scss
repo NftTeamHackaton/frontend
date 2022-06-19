@@ -1,0 +1,41 @@
+@import "../../style/variables";
+
+.networkItem {
+	text-align: start;
+
+	&:not(:last-child) {
+		margin-bottom: 16px;
+	}
+
+	&__label {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1;
+		color: #454B66;
+
+		margin-bottom: 8px;
+	}
+
+	&__title {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	&__icon {
+		width: 30px;
+		height: 30px;
+
+		object-fit: contain;
+		object-position: center;
+
+		margin-right: 4px;
+	}
+
+	&__name {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1;
+		color: $grey-light;
+	}
+}
